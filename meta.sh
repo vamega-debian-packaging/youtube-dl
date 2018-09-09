@@ -1,0 +1,9 @@
+PACKAGE_NAME='youtube-dl'
+DESCRIPTION='A small command-line program to download videos from YouTube.com and a few more sites'
+MAINTAINER='Varun Madiath <vamega@gmail.com>'
+WEBSITE_URL='https://github.com/rg3/youtube-dl'
+VCS_URL='https://github.com/rg3/youtube-dl.git'
+LICENSE="Unlicense"
+VERSION='2018.09.10'
+REPO="vamega/personal-debian-server/${PACKAGE_NAME}"
+DOWNLOAD_URL="https://github.com/rg3/youtube-dl/releases/download/${VERSION}/youtube-dl"
