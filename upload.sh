@@ -4,7 +4,9 @@ source meta.sh
 
 set -x
 
-curl -O -L -J "${DOWNLOAD_URL}"
+curl -o youtube-dl -L -J "${DOWNLOAD_URL}"
+chmod 755 youtube-dl
+
 fpm -s dir \
     -t deb \
     --description "${DESCRIPTION}" \
@@ -13,7 +15,8 @@ fpm -s dir \
     -n "${PACKAGE_NAME}" \
     -v "${VERSION}" \
     --iteration 1 \
-    'jfrog=/usr/bin/jfrog'
+    'youtube-dl=/usr/bin/youtube-dl'
+
 dpkg-deb --info *.deb
 dpkg-deb -c *.deb
 
